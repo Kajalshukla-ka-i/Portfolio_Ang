@@ -1,0 +1,63 @@
+<!-- <p>contact works!</p> -->
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container">
+    <h2 class="text-center">Contact Me</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p>Feel free to reach out to me for collaborations or any inquiries.</p>
+        <ul class="list-unstyled">
+          <li><img src="assets/images/gmail-removebg-preview.png" class="logo"> erkajalshukla@gmail.com</li>
+          <li><img src="assets/images/whatsapp-removebg-preview.png" class="logo"> 8882102287</li>
+          <li><img src="assets/images/linkedin-removebg-preview.png" class="logo"> <a
+              href='https://www.linkedin.com/in/kajal-shukla-a6213b154/' target="_blank">Linkendin</a>
+
+          <li><img src="assets/images/github.png" class="logo"> <a href='https://github.com/Kajalshukla-ka-i/'
+              target="_blank">Github</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <!-- contact-form.component.html -->
+        <div *ngIf="responseMessage" [ngClass]="{'alert-success': !isError, 'alert-danger': isError}"
+          class="alert mt-3">
+          {{ responseMessage }}
+        </div>
+        <div class="col-md-6">
+          <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="formData.name"
+                #name="ngModel">
+              <span class="text-danger" *ngIf="name.invalid && name.touched">Please enter Your Name !!!</span>
+
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="formData.email"
+                #email="ngModel">
+              <span class="text-danger" *ngIf="email.invalid && email.touched">Please enter Your Email !!!</span>
+
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required
+                [(ngModel)]="formData.message" #message="ngModel"></textarea>
+              <span class="text-danger" *ngIf="message.invalid && message.touched">Please enter Your Message !!!</span>
+
+
+            </div>
+
+            <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Send Message</button>
+
+
+          </form>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
