@@ -1,0 +1,40 @@
+/* 404.component.css */
+.page-not-found {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/assets/images/404_error.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.page-not-found .content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.page-not-found h1 {
+  font-size: 6em;
+  margin: 0;
+}
+
+.page-not-found p {
+  font-size: 1.5em;
+}
+
+.page-not-found .home-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: white;
+  background: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.page-not-found .home-link:hover {
+  background: #0056b3;
+}
